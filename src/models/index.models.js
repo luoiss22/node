@@ -13,11 +13,11 @@ function setUpModels(sequelize){
 }
 
 const sequelize = new Sequelize(
-    'node', 
-    'postgres', 
-    'root', {
-    host: 'localhost',
-    port: '5433',
+    config.dbName, 
+    config.dbUser, 
+    config.dbPassword, {
+    host: config.dbHost,
+    port: config.dbPort,
     dialect: 'postgres'
 });
 
